@@ -1,0 +1,41 @@
+First- Attempt
+Results for the extraLargeArray
+append 2.5814 ms
+insert 948.9448 ms
+
+
+Second Attempt
+Results for the extraLargeArray
+append 2.5807 ms
+insert 932.3672 ms
+
+----------
+
+Results for the LargeArray
+append 253.1 μs
+insert 7.4647 ms
+
+Results for the MediumArray
+append 954.2 μs
+insert 268.4 μs
+
+Results for the SmallArray
+append 2.1 μs
+insert 8.9 μs
+
+Results for the TinyArray
+append 3 μs
+insert 16.3 μs
+
+Append allocates the new value to the end of the array, which doesnt change the already exsisting values.
+While, insert allocates the new value to the beginning of the array, which changes the indices of the values in the array.
+The insert function takes less time the smaller the array is but grows exponentionaly the bigger the array.
+While, the append function stays linear until the end. Append scales better because it stays much more linear.
+
+Extra Credit- The methods push() and unshift() are used to add an element in an array. 
+But they have a slight variation. The method push() is used to add an element at the end of the array, 
+whereas the method unshift() is used to add the element at the start of the array.
+
+Because unshift () has to increment all the elements that already present in the Array. 
+But, push () has to insert an element at the end of the array, so none of the Array elements' index has to change. 
+But, push () can also be said with Complexity of O (n) because of dynamic allocation of memory.
